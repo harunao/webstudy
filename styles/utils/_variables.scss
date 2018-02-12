@@ -1,0 +1,27 @@
+// sass variables
+
+// reset root global variable
+$variables: 'initial value';
+
+// create mixin for override the global variable
+@mixin global-variable-overriding {
+    $variable: 'mixin value' !global;
+}
+
+.local-scope::before {
+    // create local variable for override the global variable 
+    $variable: 'local value';
+
+    // mixin include: override global variable
+    @include global-variable-overriding;
+
+    // print variable's value
+    // local value will be printed because global variable valude will be overrode.
+    content: $variable;
+}
+
+// if there is no variable for the overriding, it will be printed global variable.
+.other-local-scope::before {
+    content: $variable;
+}
+

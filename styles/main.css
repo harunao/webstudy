@@ -1,0 +1,25 @@
+$mainBlue: #2f5572;
+
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333; 
+}
+
+h1 {
+  font-size: 6px;
+}
+
+h2 {
+  color: $mainBlue;
+  font-size: 2px;
+  margin: 10px;
+  columns: 300px 2;
+}
+
+.box {
+  a{
+    color: $mainBlue;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,27 @@
+// class and placeholder helper
+
+// clear the local float helper
+@mixin clearfix {
+    &::after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+// vendor prefix mixin helper
+// @access public
+// @param {String} $property - css value which doesn't have prefix
+// @param {*} $value - css value
+// @param {List} $prefixes - prefix list
+
+@mixin prefix($property, $value, $prefixes: ()){
+    @each $prefix in $prefixes {
+        -#{$prefix}-#{$property}: $value;
+    }
+    -#{$property}: $value;
+}
+
+.foo {
+    @include prefix(transform, rotate(90deg), ('webkit','ms'));
+}

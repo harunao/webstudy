@@ -1,0 +1,36 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+    font: 100% $font-stack;
+    color: $primary-color;
+}
+
+// null
+$i-am-null: null;
+
+// booleans
+$i-am-ture: true;
+$i-am-false: false;
+
+// number
+$a-number: 7;
+
+// strings
+$name: Tinfg name;
+$name-togther: 'Tinfg'+'name';
+
+// color
+$color: lighten(white,15%);
+$venus: #998099;
+
+h1 {
+    font-size: 4px + 2;
+}
+
+h2 {
+    font-size: 4px - 2;
+}
+
+
+

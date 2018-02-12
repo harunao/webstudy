@@ -1,0 +1,25 @@
+// sass functions
+
+// conditional guideline
+// if don't need, write the code without braket
+// put a blank line before @if
+// break the line after the open braket({)
+// put @else statement on the previous close braket(}) line.
+// put a blank line after the final close braket(})
+
+
+// '@each' and '@for' guideline
+// put a blank line before @each
+// put a blank line after the final close braket(})
+
+// don't use '@while'
+
+// '@for' 
+// only user for :nth-* scenario
+// use variable '$i'
+// don't use 'to' keyword. use 'through'
+@for $i from 1 through 10 {
+    .foo:nth-of-type(#{$i}){
+        border-color: hsl($i * 36, 50%, 50%);
+    }
+}

@@ -1,0 +1,34 @@
+// grid system
+
+// '!defalut' flag is needed for overriding.
+
+// '!global' flag is only used for define the global variable from local scope.
+// if define the variable on the root, '!global' flag must not used.
+
+
+// z-index map.
+// @access private
+// @type Map
+// @prop {String} key - layer name
+// @prop {Number} value - value for key
+$z-indexes: (
+    'modal': 5000,
+    'dropdown': 4000,
+    'default': 1,
+    'below': -1,
+);
+
+// call the z-index value from a layer name
+// @access public
+// @param {String} $layer - layer name
+// @require $z-indexes
+@function z($layer){
+    @return map-get($z-indexes, $layer);
+}
+
+
+// cannot use '@extend' under '@media' (media queries)
+
+/// breakpoints
+$breakpoints: () !global;
+
