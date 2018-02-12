@@ -11,6 +11,10 @@
         font-weight: 500;
     }
 
+    &__blue {
+        color: $mainBlue;
+    }
+
     &__icon {
         display: block;
         margin-right: auto;
