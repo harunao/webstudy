@@ -1,4 +1,0 @@
-.testimonial {
-    backgound-color: rgba(255, 255, 255, .8);
-    padding: 0 1.8125rem 1px;
-}
